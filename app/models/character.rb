@@ -5,11 +5,15 @@ class Character
     @id = id
     response_body = HTTParty.get("https://ffxivcollect.com/api/characters/" + id.to_s + "?ids=1")
     @name = response_body["name"]
+    @avatar = response_body["avatar"]
     @spell_book = CharacterSpellBook.new(response_body["spells"])
   end
 
   def name
     @name
+  end
+  def avatar
+    @avatar
   end
 
   def obtained_spell_ids
