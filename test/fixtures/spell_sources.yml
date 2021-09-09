@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  text: MyString
+  related_type: MyString
+  related_id: 
+
+two:
+  type: 
+  text: MyString
+  related_type: MyString
+  related_id: 

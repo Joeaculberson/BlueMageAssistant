@@ -1,0 +1,34 @@
+<h1>Everyone needs:</h1>
+
+<% @everyone_needs.each do |id|  %>
+  <li>
+    <% @spell = @spell_book.find { |h| h["id"] == id } %>
+    #<%= @spell["order"] %>
+    <%= @spell["name"] %>
+    <ul>
+      <% @spell["sources"].each do |source| %>
+        <%= source["text"] %>
+      <% end %>
+    </ul>
+  </li>
+<% end %>
+
+
+<% @characters.each do |character| %>
+  <h2>
+    <%= character.name %> needs:
+  </h2>
+
+  <% character.needed_spell_ids.each do |id|  %>
+    <li>
+      <% @spell = @spell_book.find { |h| h["id"] == id } %>
+      #<%= @spell["order"] %>
+      <%= @spell["name"] %>
+      <ul>
+        <% @spell["sources"].each do |source| %>
+          <%= source["text"] %>
+        <% end %>
+      </ul>
+    </li>
+  <% end %>
+<% end %>
