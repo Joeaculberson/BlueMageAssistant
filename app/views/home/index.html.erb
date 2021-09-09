@@ -1,0 +1,11 @@
+<h1>Everyone needs:</h1>
+
+<%= render 'spell_list_partial', spell_ids: @everyone_needs_ids %>
+
+<% @characters.each do |character| %>
+  <h2>
+    <%= character.name %> needs:
+  </h2>
+
+  <%= render 'spell_list_partial', spell_ids: character.needed_spell_ids %>
+<% end %>

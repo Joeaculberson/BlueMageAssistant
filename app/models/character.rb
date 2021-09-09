@@ -1,16 +1,23 @@
 class Character
   attr_accessor :id, :name, :spells_obtained, :needed_spell_ids
-  def initialize(id, name, spells_obtained)
+
+  def initialize(id)
     @id = id
-    @name = name
-    @spells_obtained = spells_obtained
+    response_body = HTTParty.get("https://ffxivcollect.com/api/characters/" + id.to_s + "?ids=1")
+    @name = response_body["name"]
+    @spell_book = CharacterSpellBook.new(response_body["spells"])
   end
 
-  def spells_needed
-    @spells_needed
+  def name
+    @name
   end
 
-  def needed_spell_ids=(needed_spell_ids)
-    @needed_spell_ids = needed_spell_ids
+  def obtained_spell_ids
+    @spell_book.obtained_spell_ids
   end
+
+  def needed_spell_ids
+    @spell_book.needed_spell_ids
+  end
+
 end
