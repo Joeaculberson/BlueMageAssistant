@@ -1,1 +1,1 @@
-A FFXIV tool to find which blue mage spells are needed by all users in a given set created in Ruby on Rails.
+A FFXIV tool to find which blue mage spells are needed by all users in a given set created with Ruby on Rails.
