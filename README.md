@@ -13,13 +13,15 @@ How to use:
 
 First each player needs to go to https://ffxivcollect.com/spells and link their account to their loadstone character. Afterward, each player must mark each spell they have in order for the BlueMageAssistant application to pull in what each player has.
 
-Next, you will need to add each of their loadstone id's to the user_ids array located in C:\<downoad_location>\BlueMageAssistant\app\controllers\home_controller.rb
+Next, you will need to add each of their loadstone id's to the user_ids array located in C:\<downoad_location>\BlueMageAssistant\app\controllers\home_controller.rb. The code will look something like this:
+
+user_ids = Array [692625, 30427225, 31883647, 1551939, 117129]
 
 To get a player's loadstone id, search for their name on the loadstone and copy it from the url (692625 would be my id):
 
 https://na.finalfantasyxiv.com/lodestone/character/692625/
 
-Run the following in your command prompt (note your ruby install location may vary):
+Lastly, run the following in your command prompt (note your ruby install location may different from mine):
 
 C:\Ruby30-x64\bin\ruby.exe C:/<Download_Location>/BlueMageAssistant/bin/rails server -b 127.0.0.1 -p 3000 -e development
 
