@@ -8,7 +8,10 @@ class HomeController < ApplicationController
     # scrat 30427225
     # vandal 1551939
     # rhel 6823640
-    user_ids = Array [30427225, 1551939, 6823640]
+    # Owran 24372265
+    # Sardine 117129
+    # Raenara Noykin
+    user_ids = Array [692625, 30427225, 31883647, 1551939, 117129]
 
     p user_ids
     @master_spell_book = MasterSpellBook.new('spell_book.json')
