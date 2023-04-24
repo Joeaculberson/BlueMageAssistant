@@ -29,7 +29,7 @@ To get a player's loadstone id, search for their name on the loadstone and copy 
 
 https://na.finalfantasyxiv.com/lodestone/character/<b>692625</b>/
 
-Once obtained, add the id to the array above.
+Once obtained, add the id to the array above and <b>save the file</b>. 
 
 <h3>Running the application</h3>
 
@@ -38,3 +38,13 @@ Run the following in your command prompt (note your ruby install location may di
 C:\Ruby30-x64\bin\ruby.exe C:/<Download_Location>/BlueMageAssistant/bin/rails server -b 127.0.0.1 -p 3000 -e development
 
 Afterwards, navigate to localhost:3000 in your browser to use the application.
+
+<h2> Developer notes </h2>
+
+<h3> Player Search </h3>
+
+Admittedly, the adding of players functionality could be much more user friendly. Instead of manually adding in the id's to the code base, there could be a search menu built into the app that adds and removes id's from a text file in real time. One could leverage an api to search for characters, but I could not find any that were free of charge.
+
+<h3> FFXIV Collect Api </h3>
+
+https://documenter.getpostman.com/view/1779678/TzXzDHM1#intro
